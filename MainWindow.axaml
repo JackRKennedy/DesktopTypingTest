@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="DesktopTypingTest.MainWindow"
+        Title="Desktop Typing Test">
+
+    <!-- Main container for UI elements -->
+    <StackPanel>
+        <!-- Main title of the application -->
+        <TextBlock Text="How Fast Can You Type?" FontSize="24" HorizontalAlignment="Center" Margin="0,5"/>
+        
+        <!-- Timer display -->
+        <DockPanel LastChildFill="False">
+            <TextBox DockPanel.Dock="Right" Name="TimerTextBox" Width="100" Height="100" Text="Timer" Margin="10, 10" Padding="10"/>
+        </DockPanel>
+
+        <!-- Display area for the test text -->
+        <TextBlock Name="TestTextBlock" FontSize="16" />
+
+        <!-- Input area where the user will type -->
+        <DockPanel>
+            <TextBox Name="InputTextBox" FontSize="16" Watermark="This is where words will be displayed" HorizontalContentAlignment="Center" />
+        </DockPanel>
+        
+
+        <!-- Buttons for controlling the test -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="StartButton" Content="Start" Click="StartTest" Margin="10,0"/>
+            <Button Name="StopButton" Content="Stop" Click="StopTest" Margin="10,0"/>
+            <Button Name="ResetButton" Content="Reset" Click="ResetTest" Margin="10,0"/>
+        </StackPanel>
+
+        <!-- Area to display the results of the test -->
+        <TextBlock Name="ResultsTextBlock" FontSize="16"/>
+    </StackPanel>
+</Window>
